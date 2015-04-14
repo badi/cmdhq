@@ -20,6 +20,4 @@ class TestSh(unittest.TestCase):
             except Exception, e:
                 self.assertTrue(hasattr(e, 'output'))
                 self.assertIsInstance(e.output, str)
-                print e.output
-                # self.assertTrue(len(e.output) > 0)
                 raise
