@@ -24,15 +24,6 @@ class TestCommandCall(unittest.TestCase):
         self.assertIs(ret, 0)
         self.assertEqual(len(args), 1)
 
-    def test_no_capture(self):
-        "Does not capture output"
-        cmd = Command('ls', capture_stdout=False, capture_stderr=False)
-        out, err, ret, args = cmd()
-        self.assertIsNone(out)
-        self.assertIsNone(err)
-        self.assertIs(ret, 0)
-        self.assertEqual(len(args), 1)
-
     def test_intermediate_files_cleaned_close(self):
         "Intermediate files should be removed after closing"
         cmd = Command('ls')
