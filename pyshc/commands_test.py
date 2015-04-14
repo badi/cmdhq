@@ -86,9 +86,7 @@ class TestCommandCall(unittest.TestCase):
 
     def test_string_args(self):
         "String arguments should be accepted"
-        cmd = Command('ls',
-                      capture_stdout=True,
-                      capture_stderr=True)
+        cmd = Command('ls')
         out, err, ret, args = cmd('-lht')
 
     def test_list_args(self):
