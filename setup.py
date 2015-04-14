@@ -3,7 +3,7 @@ import os.path
 
 # IMPORTANT use semantic versioning
 # http://semver.org/
-VERSION = '0.1.0'
+VERSION = '0.1.1'
 
 module_dir = 'pyshc'
 version_file = os.path.join(module_dir, 'version.py')
