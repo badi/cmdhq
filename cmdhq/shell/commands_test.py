@@ -11,6 +11,7 @@ class TestCommandConstructor(unittest.TestCase):
         Command('ls')
         Command('/usr/bin/env')
 
+
 class TestCommandCall(unittest.TestCase):
 
     def test_default(self):
