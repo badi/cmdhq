@@ -100,12 +100,12 @@ class TestCommandCall(unittest.TestCase):
                       capture_stderr=True)
         out, err, ret, args = cmd('-lht')
 
+    def test_list_args(self):
+        "A list of arguments should be accepted"
+        raise NotImplementedError
+
     def test_unknown_command(self):
         "Should throw an exception"
         cmd = Command('this_cmd_should_not_exist_0000000000000000000000000')
         with self.assertRaises(OSError):
-            cmd()
-
-    # def test_list_args(self):
-    #     "A list of arguments should be accepted"
-    #     cmd = Command('ls'
+            cmd()    
