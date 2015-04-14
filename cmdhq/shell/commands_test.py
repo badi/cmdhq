@@ -108,4 +108,4 @@ class TestCommandCall(unittest.TestCase):
         "Should throw an exception"
         cmd = Command('this_cmd_should_not_exist_0000000000000000000000000')
         with self.assertRaises(OSError):
-            cmd()    
+            cmd()
