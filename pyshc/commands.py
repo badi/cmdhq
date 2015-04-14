@@ -115,7 +115,13 @@ class Command(object):
             stderr = None
 
         proc = subprocess.Popen(full_cmd, **kws)
-        proc.communicate()  # wait may deadlock, communicate will not
+
+        try:
+            proc.communicate()  # wait may deadlock, communicate will not
+        except KeyboardInterrupt:
+            proc.terminate()
+            proc.kill()
+            raise
 
         if stdout:
             stdout.seek(0)
