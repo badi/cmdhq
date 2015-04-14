@@ -91,7 +91,8 @@ class TestCommandCall(unittest.TestCase):
 
     def test_list_args(self):
         "A list of arguments should be accepted"
-        raise NotImplementedError
+        cmd = Command('ls')
+        out, err, ret, args = cmd(['-l', '-h', '-t'])
 
     def test_unknown_command(self):
         "Should throw an exception"
