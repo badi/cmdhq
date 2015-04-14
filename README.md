@@ -1,2 +1,2 @@
-# cmdhq
-Extensible, pluggable, commands (inspired by cloudmesh/cmd3)
+# PYthon SHell Commands
+Simple interface to running shell commands
